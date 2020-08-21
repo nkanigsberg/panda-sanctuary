@@ -13,4 +13,59 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 		font-family: 'Offside', cursive; */
 		
-		
+/* Strip default margin/padding */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button {
+	margin: 0;
+	padding: 0;
+}
+
+/* Strip ul default styling */
+ul {
+	list-style: none;
+}
+
+/* Strip anchor tag default styling */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Strip button default styling (and add pointer cursor) */
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+/* ensure images fit inside container */
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/* set root font size to 10px for simple rem conversion */
+html {
+	font-size: 62.5%;
+}
+/* back to 16px at default client font-size */
+body {
+	font-size: 1.6rem;
+}
+
+/* wrapper styles */
+.wrapper {
+	max-width: 1400px;
+	width: 85%;
+	margin: 0 auto;
+}
