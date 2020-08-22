@@ -63,7 +63,7 @@ body {
 
 /* wrapper styles */
 .wrapper {
-	max-width: 1400px;
+	max-width: 1600px;
 	width: 85%;
 	margin: 0 auto;
 }
@@ -89,7 +89,7 @@ nav a {
 	font-weight: bold;
 	font-size: 2rem;
 	line-height: 2.9rem;
-	text-align: right;
+	/* text-align: right; */
 }
 
 p {
@@ -123,13 +123,67 @@ header {
 	color: #FFFFFF;
 
 	background-image: url(./assets/header-image.png);
-	background-position: center;
+	background-position: left;
 	background-size: cover;
+
+	height: 100vh;
+}
+
+/* hide hamburger */
+header input,
+header label {
+	display: none;
+}
+
+.logo {
+	display: inline-block;
+	width: 12rem;
+	margin: 2rem 2rem 2rem 0;
+}
+
+.navbar {
+	float: right;
+}
+
+.navbar li {
+	float: left;
+}
+
+.navbar a {
+	display: inline-block;
+	padding: 2rem;
+}
+
+/* remove right padding from last link */
+.navbar li:last-of-type a {
+	padding-right: 0;
+}
+
+h1 {
+	width: 55rem;
+
+	margin-top: 10rem;
 }
 
 
+.social-icons {
+	position: absolute;
+	right: 30px;
+	top: 100px;
+}
+
+.social-icons a {
+	display: inline-block;
+	padding: 0.3rem;
+}
+
 
 /* main */
+
+section {
+	padding: 8rem 0;
+}
+
 
 /* new-friends section */
 .new-friends {
@@ -147,6 +201,48 @@ header {
 .new-friends .button {
 	color: #FFFFFF;
 	background-color: #116500;
+}
+
+
+.new-friends .images {
+	margin-top: 8rem;
+}
+
+.new-friends .images img {
+	float: left;
+	margin: 2rem 0;
+	width: calc((100% / 3) - (4rem / 3));
+}
+
+/* add side margins to middle image */
+.new-friends .images img:nth-of-type(2) {
+	margin: 2rem 2rem;
+}
+
+
+.new-friends .content {
+	padding-top: 8rem;
+
+	clear: both;
+}
+
+.new-friends .content img {
+	float: left;
+	width: 25%;
+}
+
+.new-friends .content .text {
+	float: right;
+	width: 70%;
+}
+
+.new-friends .content h2 {
+	text-align: left;
+}
+
+.new-friends .button {
+	display: inline-block;
+	margin-top: 3rem;
 }
 
 
