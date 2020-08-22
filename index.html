@@ -73,46 +73,53 @@
 
 		<!-- featured section -->
 		<section class="featured clearfix">
-			<div class="text">
-				<h2>Bobby and Bella</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellendus ex eos aliquam libero! Hic ab quis incidunt quos autem expedita quidem dignissimos quo nemo!</p>
-				<a href="#" class="button">Read More</a>
-			</div>
-			<img src="./assets/image-2@2x.png" alt="Two young pandas laying down">
-
-			<div class="text">
-				<h2>Look at Marco Now</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus numquam totam quos aut voluptates iste eius quasi tenetur sequi, hic veniam vero nemo culpa.</p>
-				<a href="#" class="button">Read More</a>
-			</div>
-			<img src="./assets/left-image@2x.png" alt="A panda eating eucalyptus">
+			<!-- <div class="wrapper"> -->
+				<div class="text">
+					<h2>Bobby and Bella</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellendus ex eos aliquam libero! Hic ab quis incidunt quos autem expedita quidem dignissimos quo nemo!</p>
+					<a href="#" class="button">Read More</a>
+				</div>
+				<img src="./assets/image-2@2x.png" alt="Two young pandas laying down">
+	
+				<div class="text">
+					<h2>Look at Marco Now</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus numquam totam quos aut voluptates iste eius quasi tenetur sequi, hic veniam vero nemo culpa.</p>
+					<a href="#" class="button">Read More</a>
+				</div>
+				<img src="./assets/left-image@2x.png" alt="A panda eating eucalyptus">
+			<!-- </div> -->
 		</section>
 
-		<nav>
-			<ul>
-				<li>
-					<a href="#"><i class="fas fa-gift"></i>Donations</a>
-				</li>
-				<li>
-					<a href="#"><i class="fas fa-briefcase"></i>Jobs</a>
-				</li>
-				<li>
-					<a href="#"><i class="fas fa-calendar-check"></i>Events</a>
-				</li>
-			</ul>
+		<nav class="lower-nav clearfix">
+			<div class="wrapper">
+				<ul>
+					<li>
+						<a href="#"><i class="fas fa-gift"></i></a>
+						<a href="#">Donations</a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-briefcase"></i></a>
+						<a href="#">Jobs</a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-calendar-check"></i></a>
+						<a href="#">Events</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 
 	</main>
 
 	<!-- footer -->
 	<footer>
-		<div class="contact">
+		<div class="contact clearfix">
 			<div class="wrapper">
 				<div class="subscribe">
 					<h3>Stay Updated</h3>
 					<p>Subscribe to our newsletter to stay updated.</p>
 					<form action="#">
-						<label for='input-email'></label>
+						<label for='input-email' class="sr-only">Email Address</label>
 						<input type='email' id='input-email' name='input-email' placeholder='email address'>
 						<button type="submit">Subscribe</button>
 					</form>

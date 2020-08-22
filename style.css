@@ -52,6 +52,10 @@ img {
 	object-fit: cover;
 }
 
+address {
+	font-style: normal;
+}
+
 /* set root font size to 10px for simple rem conversion */
 html {
 	font-size: 62.5%;
@@ -84,7 +88,12 @@ h2 {
 	/* text-align: center; */
 }
 
-nav a {
+h3 {
+	font-family: 'Offside', cursive;
+	font-size: 2.6rem;
+}
+
+header nav a {
 	font-family: 'Barlow', sans-serif;
 	font-weight: bold;
 	font-size: 2rem;
@@ -117,6 +126,10 @@ button,
 	margin-top: 3rem;
 }
 
+footer nav a {
+	font-family: 'Offside', cursive;
+	font-size: 2.4rem;
+}
 
 
 /* header */
@@ -263,48 +276,62 @@ h1 {
 }
 
 .featured .text {
-	padding: 6rem;
+	padding: 8rem;
 }
-
 
 .featured .text:first-of-type{
 	float: left;
-	/* border: 1px solid red; */
+
+	padding-left: 7.5%;
 }
 
 .featured img:first-of-type {
 	float: left;
-	/* border: 1px solid blue; */
 }
 
 .featured .text:last-of-type {
 	float: right;
-	/* border: 1px solid orange; */
+
+	padding-right: 7.5%;
 }
 
 .featured img:last-of-type {
 	float: left;
-	/* border: 1px solid yellow; */
 }
-
 
 
 
 /* lower nav */
 
-main nav {
+.lower-nav {
 	background-color: #D6F1E4;
+
+	/* height: 20rem; */
 }
 
-main nav i {
+.lower-nav i {
 	color: #2C2D2C;
+
+	font-size: 4rem;
+
+	display: block;
 }
 
-main nav a {
+.lower-nav a {
 	font-family: 'Offside', cursive;
 	font-weight: normal;
 	
 	color: #116500;
+
+	font-size: 2rem;
+}
+
+.lower-nav li {
+	text-align: center;
+	
+	float: left;
+	width: calc(100% / 3);
+	padding: 8rem 0;
 }
 
 
@@ -315,16 +342,68 @@ main nav a {
 .contact {
 	color: white;
 	background-color: #213C28;
+
+	padding: 8rem 0;
 }
 
-.contact button {
+
+.subscribe {
+	float: left;
+	width: 50%;
+}
+
+.subscribe input {
+	color: #2C2D2C;
+	
+	float: left;
+	height: 5rem;
+	width: 70%;
+
+	padding-left: 3rem;
+}
+
+.subscribe input::placeholder {
+	opacity: 80%;
+}
+
+.subscribe button {
 	color: #FFFFFF;
 	background-color: #2C2D2C;
+
+	margin: 0;
+	height: 5rem;
+	width: 30%;
 }
 
+.contact-info {
+	float: right;
+	width: 42%;
+}
+
+.contact-info div {
+	float: left;
+	/* width: 50%; */
+}
+
+.contact-info nav {
+	float: right;
+}
+
+.contact-info nav {
+	text-align: right;
+}
+
+.contact-info a {
+	display: inline-block;
+	padding: 0.5rem 0;
+}
 
 /* copyright */
 .copyright {
 	color: white;
 	background-color: #2C2D2C;
+
+	text-align: center;
+
+	padding: 0.5rem 0;
 }
