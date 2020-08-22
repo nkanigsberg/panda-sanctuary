@@ -81,7 +81,7 @@ h1 {
 h2 {
 	font-family: 'Offside', cursive;
 	font-size: 4.2rem;
-	text-align: center;
+	/* text-align: center; */
 }
 
 nav a {
@@ -112,7 +112,9 @@ button,
 	text-align: center;
 	line-height: 2.9rem;
 
+	display: inline-block;
 	padding: 1rem 2rem;
+	margin-top: 3rem;
 }
 
 
@@ -180,18 +182,20 @@ h1 {
 
 /* main */
 
-section {
-	padding: 8rem 0;
-}
-
 
 /* new-friends section */
 .new-friends {
 	background-color: #D6F1E4;
+
+	padding: 8rem 0;
 }
 
 .new-friends h2 {
 	color: #116500;
+}
+
+.new-friends .main-header {
+	text-align: center;
 }
 
 .new-friends p {
@@ -236,14 +240,10 @@ section {
 	width: 70%;
 }
 
-.new-friends .content h2 {
-	text-align: left;
-}
-
-.new-friends .button {
+/* .new-friends .button {
 	display: inline-block;
 	margin-top: 3rem;
-}
+} */
 
 
 /* featured section */
@@ -256,6 +256,41 @@ section {
 	color: #213C28;
 	background-color: #FFFFFF;
 }
+
+.featured .text,
+.featured img {
+	width: 50%;
+}
+
+.featured .text {
+	padding: 6rem;
+}
+
+
+.featured .text:first-of-type{
+	float: left;
+	/* border: 1px solid red; */
+}
+
+.featured img:first-of-type {
+	float: left;
+	/* border: 1px solid blue; */
+}
+
+.featured .text:last-of-type {
+	float: right;
+	/* border: 1px solid orange; */
+}
+
+.featured img:last-of-type {
+	float: left;
+	/* border: 1px solid yellow; */
+}
+
+
+
+
+/* lower nav */
 
 main nav {
 	background-color: #D6F1E4;
