@@ -138,7 +138,7 @@ header {
 	color: #FFFFFF;
 
 	background-image: url(./assets/header-image.png);
-	background-position: left;
+	background-position: 10% 50%;
 	background-size: cover;
 
 	height: 100vh;
@@ -263,6 +263,8 @@ h1 {
 .featured {
 	color: white;
 	background-color: #213C28;
+
+	/* position: relative; */
 }
 
 .featured .button {
@@ -270,8 +272,10 @@ h1 {
 	background-color: #FFFFFF;
 }
 
+
+
 .featured .text,
-.featured img {
+.featured .image {
 	width: 50%;
 }
 
@@ -279,24 +283,24 @@ h1 {
 	padding: 8rem;
 }
 
-.featured .text:first-of-type{
-	float: left;
-
-	padding-left: 7.5%;
+.featured img {
+	width: 50vw;
+	max-width: 50vw;
+	display: block;
 }
 
-.featured img:first-of-type {
-	float: left;
-}
-
-.featured .text:last-of-type {
+.top-row .image {
 	float: right;
-
-	padding-right: 7.5%;
 }
 
-.featured img:last-of-type {
+.bottom-row .image {
 	float: left;
+	position: relative;
+	direction: rtl;
+}
+
+.bottom-row .text {
+	float: right;
 }
 
 
