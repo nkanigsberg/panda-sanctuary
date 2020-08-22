@@ -59,6 +59,7 @@ address {
 /* set root font size to 10px for simple rem conversion */
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 /* back to 16px at default client font-size */
 body {
@@ -77,58 +78,85 @@ body {
 
 h1 {
 	font-family: 'Barlow', sans-serif;
-	font-size: 6.88rem;
-	line-height: 6.37rem;
-	letter-spacing: 0.08rem;
+	/* font-size: 6.88rem; */
+	font-size: calc(3.4rem + 3.4vw);
+	/* line-height: 6.37rem; */
+	line-height: calc(3.2rem + 3.2vw);
+	/* letter-spacing: 0.08rem; */
+	letter-spacing: calc(0.04rem + 0.04vw);
 }
 
 h2 {
 	font-family: 'Offside', cursive;
-	font-size: 4.2rem;
-	/* text-align: center; */
+	/* font-size: 4.2rem; */
+	font-size: calc(2.1rem + 2.1vw);
 }
 
 h3 {
 	font-family: 'Offside', cursive;
-	font-size: 2.6rem;
+	/* font-size: 2.6rem; */
+	font-size: calc(1.3rem + 1.3vw);
+}
+
+.logo {
+	font-family: 'Offside', cursive;
+	/* font-size: 2rem; */
+	font-size: calc(1rem + 1vw);
+	/* line-height: 2rem; */
+	line-height: calc(1rem + 1vw);
 }
 
 header nav a {
 	font-family: 'Barlow', sans-serif;
 	font-weight: bold;
-	font-size: 2rem;
-	line-height: 2.9rem;
-	/* text-align: right; */
+	/* font-size: 2rem; */
+	font-size: calc(1rem + 1vw);
+	/* line-height: 2.9rem; */
+	line-height: calc(1.5rem + 1.4vw);
 }
+
+header nav a:hover,
+header nav a:focus {
+	color: #9cd1b7;
+}
+
 
 p {
 	font-family: 'Barlow', sans-serif;
-	font-size: 2rem;
-	line-height: 3rem;
-	letter-spacing: 0.02rem;
-}
-
-.logo {
-	font-family: 'Offside', cursive;
-	font-size: 2rem;
-	line-height: 2rem;
+	/* font-size: 2rem; */
+	font-size: calc(1rem + 1vw);
+	/* line-height: 3rem; */
+	line-height: calc(1.5rem + 1.5vw);
+	/* letter-spacing: 0.02rem; */
+	letter-spacing: calc(0.01rem + 0.01vw);
 }
 
 button,
 .button {
 	font-family: 'Offside', cursive;
-	font-style: 2rem;
+	/* font-size: 2rem; */
+	font-size: calc(1rem + 1vw);
 	text-align: center;
-	line-height: 2.9rem;
+	/* line-height: 2.9rem; */
+	line-height: calc(1.5rem + 1.4vw);
 
 	display: inline-block;
-	padding: 1rem 2rem;
+	/* padding: 1rem 2rem; */
+	padding: calc(0.5rem + 0.5vw) calc(1rem + 1vw);
 	margin-top: 3rem;
+	margin-top: calc(1.5rem + 1.5vw);
+}
+
+input[type="email"] {
+	font-family: 'Barlow', sans-serif;
+	/* font-size: 2rem; */
+	font-size: calc(1rem + 1vw);
 }
 
 footer nav a {
 	font-family: 'Offside', cursive;
-	font-size: 2.4rem;
+	/* font-size: 2.4rem; */
+	font-size: calc(1.2rem + 1.2vw);
 }
 
 
@@ -138,7 +166,7 @@ header {
 	color: #FFFFFF;
 
 	background-image: url(./assets/header-image.png);
-	background-position: 10% 50%;
+	background-position: 10% 30%;
 	background-size: cover;
 
 	height: 100vh;
@@ -152,8 +180,11 @@ header label {
 
 .logo {
 	display: inline-block;
-	width: 12rem;
-	margin: 2rem 2rem 2rem 0;
+	/* width: 12rem; */
+	width: calc(6rem + 6vw);
+	/* margin: 2rem; */
+	margin: calc(1rem + 1vw);
+	margin-left: 0;
 }
 
 .navbar {
@@ -164,9 +195,17 @@ header label {
 	float: left;
 }
 
+/* add shadow to text for readability over image */
+h1,
+.navbar a,
+.social-icons a {
+	text-shadow: 2px 2px 1px #213C28;
+}
+
 .navbar a {
 	display: inline-block;
-	padding: 2rem;
+	/* padding: 2rem; */
+	padding: calc(1rem + 1vw);
 }
 
 /* remove right padding from last link */
@@ -175,21 +214,26 @@ header label {
 }
 
 h1 {
-	width: 55rem;
+	/* width: 55rem; */
+	width: calc(22.5rem + 22.5vw);
 
-	margin-top: 10rem;
+	/* margin-top: 10rem; */
+	margin-top: calc(1rem + 1vw);
 }
 
 
 .social-icons {
 	position: absolute;
-	right: 30px;
-	top: 100px;
+	/* right: 30px; */
+	right: calc(1.5rem + 1.5vw);
+	/* top: 100px; */
+	top: calc(6rem + 6vw);
 }
 
 .social-icons a {
 	display: inline-block;
-	padding: 0.3rem;
+	/* padding: 0.3rem; */
+	padding: calc(0.15rem + 0.15vw);
 }
 
 
@@ -200,7 +244,8 @@ h1 {
 .new-friends {
 	background-color: #D6F1E4;
 
-	padding: 8rem 0;
+	/* padding: 8rem 0; */
+	padding: calc(2rem + 5vw) 0;
 }
 
 .new-friends h2 {
@@ -222,18 +267,21 @@ h1 {
 
 
 .new-friends .images {
-	margin-top: 8rem;
+	/* margin-top: 8rem; */
+	margin-top: calc(2rem + 3vw);
 }
 
 .new-friends .images img {
 	float: left;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
+	/* margin: calc(1rem + 1vw) 0; */
 	width: calc((100% / 3) - (4rem / 3));
 }
 
 /* add side margins to middle image */
 .new-friends .images img:nth-of-type(2) {
-	margin: 2rem 2rem;
+	/* margin: 0 2rem; */
+	margin: calc();
 }
 
 
