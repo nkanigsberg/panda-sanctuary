@@ -64,6 +64,7 @@ html {
 /* back to 16px at default client font-size */
 body {
 	font-size: 1.6rem;
+	overflow-x: hidden;
 }
 
 /* wrapper styles */
@@ -79,7 +80,7 @@ body {
 h1 {
 	font-family: 'Barlow', sans-serif;
 	/* font-size: 6.88rem; */
-	font-size: calc(3.0rem + 3.0vw);
+	font-size: calc(2rem + 3.0vw);
 	/* line-height: 6.37rem; */
 	line-height: calc(3.2rem + 3.2vw);
 	/* letter-spacing: 0.08rem; */
@@ -89,7 +90,7 @@ h1 {
 h2 {
 	font-family: 'Offside', cursive;
 	/* font-size: 4.2rem; */
-	font-size: calc(1.4rem + 1.8vw);
+	font-size: calc(1.2rem + 1.8vw);
 }
 
 h3 {
@@ -104,6 +105,7 @@ h3 {
 	font-size: calc(1rem + 1vw);
 	/* line-height: 2rem; */
 	line-height: calc(1rem + 1vw);
+	font-weight: normal;
 }
 
 header nav a {
@@ -222,10 +224,12 @@ h1,
 
 h1 {
 	/* width: 55rem; */
-	width: calc(22.5rem + 22.5vw);
+	width: calc(20rem + 20vw);
 
 	/* margin-top: 10rem; */
 	margin-top: calc(1rem + 1vw);
+
+	line-height: 1;
 }
 
 
@@ -284,18 +288,38 @@ h1 {
 	margin-top: calc(2rem + 3vw);
 }
 
-/* add side margins to middle image */
-.new-friends .images img:nth-of-type(2) {
-	/* margin: 0 2rem; */
-	margin: 0 calc(1.5rem + 1.5vw);
+.new-friends .images-top {
+	width: calc(2 * (100% / 3));
 }
 
-.new-friends .images img {
+/* add side margins to middle image */
+/* .new-friends .images img:nth-of-type(2) { */
+	/* margin: 0 2rem; */
+	/* margin: 0 calc(1.5rem + 1.5vw); */
+/* } */
+
+.new-friends img {
+	display: inline-block;
+}
+
+
+.new-friends .images-top img {
 	float: left;
 	/* margin: 2rem 0; */
 	/* margin: calc(1rem + 1vw) 0; */
 	/* width: calc((100% / 3) - (4rem / 3)); */
-	width: calc(33.33% - ((3rem + 3vw) / 3));
+	width: calc(49.99% - (1.5rem + 1.5vw) / 2);
+}
+
+.new-friends .images-top img:last-of-type,
+.new-friends .main-image {
+	/* margin-left: calc(0rem + 1.1vw); */
+}
+
+
+.new-friends .main-image {
+	float: left;
+	width: calc(33.33% - (1.5rem + 1.5vw) / 3);
 }
 
 
@@ -334,7 +358,7 @@ h1 {
 
 .featured h2 {
 	/* margin-bottom: 2rem; */
-	margin-bottom: calc(1rem + 1vw);
+	margin-bottom: calc(0.6rem + 0.8vw);
 }
 
 .featured .button {
@@ -354,7 +378,7 @@ h1 {
 
 .featured .text {
 	/* padding: 8rem; */
-	padding: calc(-4rem + 10vw) calc(2rem + 4vw) 0;
+	padding: calc(-6rem + 10vw) calc(-2rem + 7vw) 0;
 }
 
 .featured img {
@@ -481,7 +505,7 @@ h1 {
 
 .contact-info {
 	float: right;
-	width: 42%;
+	width: 43%;
 }
 
 .contact-info div {
@@ -523,7 +547,7 @@ h1 {
 
 .created {
 	font-family: 'Barlow', sans-serif;
-	font-size: calc(0.6rem + 0.6vw);
+	font-size: calc(0.8rem + 0.6vw);
 
 	position: absolute;
 
@@ -531,7 +555,57 @@ h1 {
 	bottom: calc(0.3rem + 0.3vw);
 }
 
+.created a {
+	text-decoration: underline;
+}
+
 .created a:hover,
 .created a:focus {
 	opacity: 50%;
+}
+
+
+/* media queries */
+
+/* 1024px - tablet large and below */
+@media (max-width: 1024px) {
+	.wrapper {
+		width: 90%;
+	}
+
+	.contact-info p:nth-child(-n+2) {
+		display: block;
+	}
+
+}
+
+
+/* 768px - tablet small and below */
+@media (max-width: 768px) {
+	header {
+		height: 60vh;
+		background-position: 30% 0%;
+	}
+
+	.new-friends .images-top {
+		width: 100%;
+	}
+
+	.new-friends .images-top img:last-child {
+		margin: 0;
+		float: right;
+	}
+
+	/* .new-friends .main-image {
+
+	} */
+
+
+
+}
+
+
+/* 480px - mobile large and below */
+@media (max-width: 480px) {
+
 }
