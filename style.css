@@ -1,4 +1,4 @@
-/* setup */
+/* =============== setup =============== */
 
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
 
@@ -14,9 +14,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
 ul,
 li,
@@ -52,6 +49,7 @@ img {
 	object-fit: cover;
 }
 
+/* strip default address styling */
 address {
 	font-style: normal;
 }
@@ -59,7 +57,6 @@ address {
 /* set root font size to 10px for simple rem conversion */
 html {
 	font-size: 62.5%;
-	scroll-behavior: smooth;
 }
 /* back to 16px at default client font-size */
 body {
@@ -75,35 +72,32 @@ body {
 }
 
 
-/* global styles */
+/* =============== global styles =============== */
+
+html {
+	scroll-behavior: smooth;
+}
 
 h1 {
 	font-family: 'Barlow', sans-serif;
-	/* font-size: 6.88rem; */
 	font-size: calc(2rem + 3.0vw);
-	/* line-height: 6.37rem; */
 	line-height: calc(3.2rem + 3.2vw);
-	/* letter-spacing: 0.08rem; */
 	letter-spacing: calc(0.04rem + 0.04vw);
 }
 
 h2 {
 	font-family: 'Offside', cursive;
-	/* font-size: 4.2rem; */
 	font-size: calc(1.2rem + 1.8vw);
 }
 
 h3 {
 	font-family: 'Offside', cursive;
-	/* font-size: 2.6rem; */
 	font-size: calc(1.4rem + 1.3vw);
 }
 
 .logo {
 	font-family: 'Offside', cursive;
-	/* font-size: 2rem; */
 	font-size: calc(1rem + 1vw);
-	/* line-height: 2rem; */
 	line-height: calc(1rem + 1vw);
 	font-weight: normal;
 }
@@ -111,9 +105,7 @@ h3 {
 header nav a {
 	font-family: 'Barlow', sans-serif;
 	font-weight: bold;
-	/* font-size: 2rem; */
 	font-size: calc(1rem + 1vw);
-	/* line-height: 2.9rem; */
 	line-height: calc(1.5rem + 1.4vw);
 }
 
@@ -126,31 +118,23 @@ nav a:focus {
 	color: #9cd1b7;
 }
 
-
 p {
 	font-family: 'Barlow', sans-serif;
-	/* font-size: 2rem; */
 	font-size: calc(1.2rem + 0.5vw);
-	/* line-height: 3rem; */
 	line-height: calc(1.4rem + 1.0vw);
-	/* letter-spacing: 0.02rem; */
 	letter-spacing: calc(0.01rem + 0.01vw);
 }
 
 button,
 .button {
 	font-family: 'Offside', cursive;
-	/* font-size: 2rem; */
 	font-size: calc(1.2rem + 0.5vw);
 	text-align: center;
-	/* line-height: 2.9rem; */
 	line-height: calc(1.5rem + 1.4vw);
 	text-transform: uppercase;
 
 	display: inline-block;
-	/* padding: 1rem 2rem; */
 	padding: calc(0.5rem + 0.2vw) calc(1rem + 0.8vw);
-	/* margin-top: 3rem; */
 	margin-top: calc(1.0rem + 1.0vw);
 
 	transition: 0.1s color, 0.1s background-color;
@@ -158,13 +142,11 @@ button,
 
 input[type="email"] {
 	font-family: 'Barlow', sans-serif;
-	/* font-size: 2rem; */
 	font-size: calc(1rem + 1vw);
 }
 
 footer nav a {
 	font-family: 'Offside', cursive;
-	/* font-size: 2.4rem; */
 	font-size: calc(1.2rem + 1.2vw);
 }
 
@@ -186,8 +168,7 @@ footer nav a {
 }
 
 
-
-/* header */
+/* =============== header =============== */
 
 header {
 	color: #FFFFFF;
@@ -207,9 +188,7 @@ header label {
 
 .logo {
 	display: inline-block;
-	/* width: 12rem; */
 	width: calc(6rem + 6vw);
-	/* margin: 2rem; */
 	margin: calc(1rem + 1vw);
 	margin-left: 0;
 }
@@ -231,7 +210,6 @@ h1,
 
 .navbar a {
 	display: inline-block;
-	/* padding: 2rem; */
 	padding: calc(1rem + 1vw) calc(0.8rem + 0.8vw);
 }
 
@@ -241,45 +219,36 @@ h1,
 }
 
 h1 {
-	/* width: 55rem; */
 	width: calc(20rem + 20vw);
-
-	/* margin-top: 10rem; */
 	margin-top: calc(1rem + 1vw);
 
 	line-height: 1;
 }
 
-
 .social-icons {
 	position: absolute;
-	/* right: 30px; */
 	right: calc(1.5rem + 1.5vw);
-	/* top: 100px; */
 	top: calc(6rem + 6vw);
 }
 
 .social-icons a {
 	display: inline-block;
-	/* padding: 0.3rem; */
 	padding: calc(0.15rem + 0.15vw);
 }
 
 
-/* main */
+/* =============== main =============== */
 
-
-/* new-friends section */
+/* =============== new-friends section =============== */
 .new-friends {
 	background-color: #D6F1E4;
 
-	/* padding: 8rem 0; */
 	padding: calc(2rem + 5vw) 0;
 }
 
 .new-friends h2 {
 	color: #116500;
-	/* margin-bottom: 1.6rem; */
+
 	margin-bottom: calc(0.8rem + 0.8vw);
 }
 
@@ -302,7 +271,6 @@ h1 {
 }
 
 .new-friends .images {
-	/* margin-top: 8rem; */
 	margin-top: calc(2rem + 3vw);
 }
 
@@ -313,15 +281,12 @@ h1 {
 
 /* add side margins to middle image */
 .new-friends .images img:nth-of-type(2) {
-	/* margin: 0 2rem; */
 	margin: 0 calc(1.5rem + 1.5vw);
  }
 
 
 .new-friends .content {
-	/* padding-top: 8rem; */
 	padding-top: calc(4rem + 4vw);
-
 	clear: both;
 }
 
@@ -335,22 +300,14 @@ h1 {
 	width: 70%;
 }
 
-/* .new-friends .button {
-	display: inline-block;
-	margin-top: 3rem;
-} */
 
-
-/* featured section */
+/* =============== featured section =============== */
 .featured {
 	color: white;
 	background-color: #213C28;
-
-	/* position: relative; */
 }
 
 .featured h2 {
-	/* margin-bottom: 2rem; */
 	margin-bottom: calc(0.6rem + 0.8vw);
 }
 
@@ -369,8 +326,8 @@ h1 {
 	width: 50%;
 }
 
+/* apply negative base padding so will scale to near 0 before breakpoint */
 .featured .text {
-	/* padding: 8rem; */
 	padding: calc(-8rem + 12.5vw) calc(-2rem + 7vw) 0;
 }
 
@@ -396,18 +353,15 @@ h1 {
 
 .bottom-row .text {
 	float: right;
-	
 	padding-right: 0;
 }
 
 
 
-/* lower nav */
+/* =============== lower nav =============== */
 
 .lower-nav {
 	background-color: #D6F1E4;
-
-	/* height: 20rem; */
 }
 
 .lower-nav li {
@@ -415,14 +369,12 @@ h1 {
 	
 	float: left;
 	width: calc(100% / 3);
-	/* padding: 8rem 0; */
 	padding: calc(4rem + 4vw) 0;
 }
 
 .lower-nav i {
 	color: #2C2D2C;
 
-	/* font-size: 4rem; */
 	font-size: calc(2.6rem + 1.6vw);
 
 	display: block;
@@ -431,27 +383,23 @@ h1 {
 .lower-nav a {
 	font-family: 'Offside', cursive;
 	font-weight: normal;
-	
-	color: #116500;
+		font-size: calc(1.4rem + 0.8vw);
 
-	/* font-size: 2rem; */
-	font-size: calc(1.4rem + 0.8vw);
+	color: #116500;
 }
 
 
-/* footer */
+/* =============== footer =============== */
 
-/* contact */
+/* =============== contact =============== */
 .contact {
 	color: white;
 	background-color: #213C28;
 
-	/* padding: 8rem 0; */
 	padding: calc(2rem + 5vw) 0;
 }
 
 .contact h3 {
-	/* margin-bottom: 1.2rem; */
 	margin-bottom: calc(0.6rem + 0.6vw);
 }
 
@@ -461,7 +409,6 @@ h1 {
 }
 
 .subscribe p {
-	/* margin-bottom: 1rem; */
 	margin-bottom: calc(0.5rem + 0.5vw);
 }
 
@@ -471,11 +418,8 @@ h1 {
 	outline: none;
 	
 	float: left;
-	/* height: 5rem; */
 	height: calc(2.5rem + 2.5vw);
 	width: 65%;
-
-	/* padding-left: 3rem; */
 	padding-left: calc(1.5rem + 1.2vw);
 }
 
@@ -492,7 +436,6 @@ h1 {
 	background-color: #2C2D2C;
 
 	margin: 0;
-	/* height: 5rem; */
 	height: calc(2.5rem + 2.5vw);
 	width: 35%;
 }
@@ -510,20 +453,16 @@ h1 {
 
 .contact-info div {
 	float: left;
-	/* width: 50%; */
-}
-
-.contact-info nav {
-	float: right;
 }
 
 .contact-info nav {
 	text-align: right;
+	
+	float: right;
 }
 
 .contact-info a {
 	display: inline-block;
-	/* padding: 0.5rem 0; */
 	padding: calc(0.25rem + 0.25vw);
 }
 
@@ -532,16 +471,14 @@ h1 {
 	display: inline;
 }
 
-/* copyright */
+/* =============== copyright =============== */
 .copyright {
 	color: white;
 	background-color: #2C2D2C;
 
 	text-align: center;
 
-	/* padding: 0.5rem 0; */
 	padding: calc(0.25rem + 0.25vw) 0;
-
 	position: relative;
 }
 
@@ -550,7 +487,6 @@ h1 {
 	font-size: calc(1rem + 0.5vw);
 
 	position: absolute;
-
 	left: calc(1rem + 1vw);
 	bottom: calc(0.3rem + 0.3vw);
 }
@@ -565,9 +501,9 @@ h1 {
 }
 
 
-/* media queries */
+/* =============== media queries =============== */
 
-/* 1024px - tablet large and below */
+/* =============== 1024px - tablet large and below =============== */
 @media (max-width: 1024px) {
 	.wrapper {
 		width: 90%;
@@ -576,22 +512,19 @@ h1 {
 	.contact-info p:nth-child(-n+2) {
 		display: block;
 	}
-
 }
 
 
-/* 768px - tablet small and below */
+/* =============== 768px - tablet small and below =============== */
 @media (max-width: 768px) {
 		
 	/* header */
-
 	header {
 		height: 60vh;
 		background-position: 30% 0%;
 	}
 
-
-	/* nav - dropdown */
+	/* =============== nav - dropdown =============== */
 
 	/* show hamburger */
 	header input,
@@ -601,7 +534,7 @@ h1 {
 
 	/* hide checkbox */
 	header input {
-		position: absolute;
+		position: fixed;
 		right: 1rem;
 		opacity: 0;
 	}
@@ -617,12 +550,10 @@ h1 {
 
 	header label {
 		z-index: 100;
-		
 		cursor: pointer;
 
 		font-size: 2.2rem;
 
-		/* display: inline; */
 		visibility: visible;
 
 		right: 2rem;
@@ -672,9 +603,7 @@ h1 {
 		box-shadow: -1px 1px 5px #2C2D2CAA;
 		
 		top: 0;
-		/* width: 20rem; */
 		width: calc(12rem + 10vw);
-		/* height: 40rem; */
 		height: calc(20rem + 15vw);
 	}
 
@@ -708,7 +637,7 @@ h1 {
 	}
 
 
-	/* main */
+	/* =============== main =============== */
 
 	/* new-friends section */
 
@@ -724,9 +653,7 @@ h1 {
 	/* last image full width */
 	.new-friends .images img:last-child {
 		width: 100%;
-		/* height: 40rem; */
 		height: 80vw;
-		/* margin-top: 5rem; */
 		margin-top: calc(3rem + 2.5vw);
 	}
 
@@ -759,12 +686,11 @@ h1 {
 
 	.featured .text {
 		clear: both;
-		/* padding: 4rem 0; */
 		padding: calc(2rem + 2vw) 0;
 	}
 
 
-	/* footer */
+	/* =============== footer =============== */
 
 	.subscribe,
 	.contact-info {
@@ -780,12 +706,14 @@ h1 {
 		margin-top: calc(1.5rem + 1.5vw);
 	}
 
-
+	.created {
+		position: static;
+	}
 }
 
 
 
-/* 480px - mobile large and below */
+/* =============== 480px - mobile large and below =============== */
 @media (max-width: 480px) {
 
 	h2,
@@ -802,7 +730,6 @@ h1 {
 	h1 {
 		width: calc(12rem + 14vw);
 	}
-
 
 	/* lower nav */
 
@@ -823,14 +750,8 @@ h1 {
 		width: 100%;
 	}
 
-
 	.subscribe button {
 		margin-top: 0.5rem;
 		width: auto;
 	}
-
-	.created {
-		position: static;
-	}
-
 }
