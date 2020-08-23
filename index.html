@@ -14,31 +14,35 @@
 
 
 <!-- todo -->
-	<!-- skiplinks -->
-	<!-- noopener links -->
 
 <body>
-	
+	<nav class="skip-links">
+		<a href="#main" class="skip-link">Skip to main content</a>
+		<a href="#contact" class="skip-link">Skip to contact section</a>
+	</nav>
+
+
 	<!-- header -->
 	<header>
 		<div class="wrapper">
 			<nav class="clearfix">
+
 				<a href="#" class="logo">Panda Sanctuary</a>
 		
 				<input type='checkbox' id='nav-toggle' name='nav-toggle'>
-				<label for='nav-toggle'><i class="fas fa-bars"></i></label>
+				<label for='nav-toggle'><span class="hamburger"><i class="fas fa-bars"></i></span><span class="x"><i class="fas fa-times"></i></span></label>
 				<ul class="navbar">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 
 				<ul class="social-icons">
-					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-					<li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
-					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="#" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#" rel="noopener"><i class="fab fa-snapchat-ghost"></i></a></li>
+					<li><a href="#" rel="noopener"><i class="fab fa-twitter"></i></a></li>
 				</ul>
 
 				<div class="nav-panel"></div>
@@ -51,7 +55,7 @@
 	</header>
 
 	<!-- main -->
-	<main>
+	<main id="main">
 		<!-- new friends section -->
 		<section class="new-friends">
 			<div class="wrapper">
@@ -70,7 +74,9 @@
 					<div class="text">
 						<h2>More About Our Park</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae esse voluptate hic quisquam nihil quaerat eius quas alias consequatur reprehenderit, aliquid pariatur nam quos odit deleniti placeat deserunt itaque iure aut voluptatibus commodi. Veniam unde iure repellendus quidem sed maxime excepturi ad doloremque dolorem quae, repellat id dignissimos optio fugiat quasi quos expedita cumque nesciunt eaque nam omnis aperiam reiciendis inventore odit. Distinctio unde, quo magni reiciendis praesentium eveniet eaque harum ducimus nulla totam.</p>
-						<a href="#" class="button">Read More</a>
+						<div class="button-container">
+							<a href="#" class="button">Read More</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -89,7 +95,9 @@
 					<div class="text">
 						<h2>Bobby and Bella</h2>
 						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum reprehenderit culpa, ducimus cum libero amet non. Enim dolorem inventore quod voluptas maiores iste, commodi obcaecati blanditiis nihil, veritatis a animi neque! Quod eius pariatur placeat ullam id odio illum nemo?</p>
-						<a href="#" class="button">Read More</a>
+						<div class="button-container">
+							<a href="#" class="button">Read More</a>
+						</div>
 					</div>
 				</div>
 
@@ -101,7 +109,9 @@
 					<div class="text">
 						<h2>Look at Marco Now</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi maxime quisquam perferendis nemo repudiandae natus similique dolor quo exercitationem quam, repellat, illo unde quidem omnis iste! Sapiente, dolorum officia dolores quaerat, distinctio est, corporis ipsam inventore.</p>
-						<a href="#" class="button">Read More</a>
+						<div class="button-container">
+							<a href="#" class="button">Read More</a>
+						</div>
 					</div>
 				</div>
 
@@ -136,7 +146,7 @@
 	</main>
 
 	<!-- footer -->
-	<footer>
+	<footer id="contact">
 		<div class="contact clearfix">
 			<div class="wrapper">
 				<div class="subscribe">
@@ -175,7 +185,7 @@
 
 		<div class="copyright">
 			<p>Copyright © 2020 Juno College</p>
-			<p class="created">Created at <a href="https://junocollege.com/">Juno College</a></p>
+			<p class="created">Created at <a href="https://junocollege.com/" rel="noopener">Juno College</a></p>
 		</div>
 	</footer>
 

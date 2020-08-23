@@ -96,7 +96,7 @@ h2 {
 h3 {
 	font-family: 'Offside', cursive;
 	/* font-size: 2.6rem; */
-	font-size: calc(1.3rem + 1.3vw);
+	font-size: calc(1.4rem + 1.3vw);
 }
 
 .logo {
@@ -141,7 +141,7 @@ button,
 .button {
 	font-family: 'Offside', cursive;
 	/* font-size: 2rem; */
-	font-size: calc(0.8rem + 0.8vw);
+	font-size: calc(1.2rem + 0.5vw);
 	text-align: center;
 	/* line-height: 2.9rem; */
 	line-height: calc(1.5rem + 1.4vw);
@@ -149,7 +149,7 @@ button,
 
 	display: inline-block;
 	/* padding: 1rem 2rem; */
-	padding: calc(0.3rem + 0.3vw) calc(0.8rem + 1vw);
+	padding: calc(0.5rem + 0.2vw) calc(1rem + 0.8vw);
 	/* margin-top: 3rem; */
 	margin-top: calc(1.0rem + 1.0vw);
 
@@ -167,6 +167,24 @@ footer nav a {
 	/* font-size: 2.4rem; */
 	font-size: calc(1.2rem + 1.2vw);
 }
+
+/* Skip links */
+.skip-link {
+	position: absolute;
+	left: -1000px;
+	top: 5px;
+	z-index: 999;
+	background: white;
+	color: black;
+	padding: 1rem;
+}
+
+.skip-link:focus {
+	color: black;
+	left: 0;
+	top: 0;
+}
+
 
 
 /* header */
@@ -186,7 +204,6 @@ header input,
 header label {
 	display: none;
 }
-
 
 .logo {
 	display: inline-block;
@@ -406,7 +423,7 @@ h1 {
 	color: #2C2D2C;
 
 	/* font-size: 4rem; */
-	font-size: calc(2rem + 2vw);
+	font-size: calc(2.6rem + 1.6vw);
 
 	display: block;
 }
@@ -418,7 +435,7 @@ h1 {
 	color: #116500;
 
 	/* font-size: 2rem; */
-	font-size: calc(1rem + 1vw);
+	font-size: calc(1.4rem + 0.8vw);
 }
 
 
@@ -430,7 +447,7 @@ h1 {
 	background-color: #213C28;
 
 	/* padding: 8rem 0; */
-	padding: calc(4rem + 4vw) 0;
+	padding: calc(2rem + 5vw) 0;
 }
 
 .contact h3 {
@@ -456,7 +473,7 @@ h1 {
 	float: left;
 	/* height: 5rem; */
 	height: calc(2.5rem + 2.5vw);
-	width: 70%;
+	width: 65%;
 
 	/* padding-left: 3rem; */
 	padding-left: calc(1.5rem + 1.2vw);
@@ -477,7 +494,7 @@ h1 {
 	margin: 0;
 	/* height: 5rem; */
 	height: calc(2.5rem + 2.5vw);
-	width: 30%;
+	width: 35%;
 }
 
 .subscribe button:hover,
@@ -530,7 +547,7 @@ h1 {
 
 .created {
 	font-family: 'Barlow', sans-serif;
-	font-size: calc(0.8rem + 0.6vw);
+	font-size: calc(1rem + 0.5vw);
 
 	position: absolute;
 
@@ -576,6 +593,19 @@ h1 {
 
 	/* nav - dropdown */
 
+	/* show hamburger */
+	header input,
+	header label {
+		display: inline;
+	}
+
+	/* hide checkbox */
+	header input {
+		position: absolute;
+		right: 1rem;
+		opacity: 0;
+	}
+
 	header label,
 	.navbar,
 	.social-icons,
@@ -592,10 +622,17 @@ h1 {
 
 		font-size: 2.2rem;
 
-		display: inline;
+		/* display: inline; */
+		visibility: visible;
 
 		right: 2rem;
 		top: 2rem;
+
+		transition: 0.1s color;
+	}
+
+	.x {
+		display: none;
 	}
 
 	.navbar {
@@ -631,7 +668,7 @@ h1 {
 	.nav-panel {
 		z-index: 10;
 
-		background-color: #213C28;
+		background-color: #2C2D2C;
 		box-shadow: -1px 1px 5px #2C2D2CAA;
 		
 		top: 0;
@@ -651,6 +688,23 @@ h1 {
 	.navbar,
 	.social-icons {
 		right: -20rem;
+	}
+
+	/* toggle hamburger with x on check */
+	header input:checked ~ label .hamburger {
+		display: none;
+	}
+
+	header input:checked ~ label .x {
+		display: inline;
+	}
+
+	header label:hover {
+		color: #9cd1b7;
+	}
+
+	header input:focus ~ label {
+		outline: 1px dotted #9cd1b7;
 	}
 
 
@@ -734,10 +788,15 @@ h1 {
 /* 480px - mobile large and below */
 @media (max-width: 480px) {
 
+	h2,
+	.button-container {
+		text-align: center;
+	}
+
 	/* header */
 
 	header {
-		height: 50vh;
+		height: 40vh;
 	}
 
 	h1 {
@@ -767,6 +826,11 @@ h1 {
 
 	.subscribe button {
 		margin-top: 0.5rem;
+		width: auto;
+	}
+
+	.created {
+		position: static;
 	}
 
 }
