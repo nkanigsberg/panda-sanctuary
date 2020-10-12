@@ -1,4 +1,6 @@
-# nathan-kanigsberg-project-one
-<strong>Project 1 - Juno College Web Development Bootcamp</strong><br>
-Panda Sanctuary - Responsive design using floats and clearfix<br><br>
-Link: https://nkanigsberg.github.io/nathan-kanigsberg-project-one/
+# panda-sanctuary
+<strong>Single page responsive web page using floats and clearfix </strong>
+<br><br>
+Link: https://nkanigsberg.github.io/panda-sanctuary/
+<br><br>
+![Screenshot of Panda Sanctuary Webpage](panda-sanctuary.png?raw=true "Game screenshot")
